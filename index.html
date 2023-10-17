@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - App</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+    <div id="wrapper">
+        <div class="container">
+            <div class="heading">
+                <h1>WEATHER APP</h1>
+            </div>
+            <div class="buttons">
+                <p id="yourWeather" class="active">Your Weather</p>
+                <p id="searchWeather">Search Weather</p>
+            </div>
+
+            <div class="form-container vanish">
+                <input type="text" placeholder="Search for city..." id="searchInput">
+                <button class="search-logo">
+                    <img src="./images/search.png" alt="">
+                </button>
+            </div>
+
+            <div class="loading-container vanish">
+                <img src="./images/loading.gif" alt="">
+            </div>
+
+            <div class="not-found vanish">
+                <div class="notFoundImg">
+                    <img src="./images/not-found.png" alt="">
+                </div>
+                <p>City Not Found</p>
+            </div>
+
+            <div class="location">
+                <img src="./images/location.png" alt="">
+                <h2>Grant Location Access</h2>
+                <span>Allow Access To Get Weather Information</span>
+                <p id="grantAccess">GRANT ACCESS</p>
+            </div>
+
+            <!-- Weather result by js -->
+            <div class="weather-result vanish">
+                <div class="cityNameAndFlag">
+                    <p id="cityName"></p>
+                    <img src="" alt="" class="flag">
+                </div>
+                <p id="cityCondition"></p>
+                <img src="./images/cloud.png" alt="" id="cityConditionImg">
+                <h1 id="temp"></h1>
+                <div class="others">
+                    <div class="windspeed">
+                        <img src="./images/wind.png" alt="">
+                        <p id="windspeed-heading">WINDSPEED</p>
+                        <p id="windData"></p>
+                    </div>
+                    <div class="humidity">
+                        <img src="./images/humidity.png" alt="">
+                        <p id="humidity-heading">HUMIDITY</p>
+                        <p id="humidityData"></p>
+                    </div>
+                    <div class="clouds">
+                        <img src="./images/cloud.png" alt="">
+                        <p id="clouds-heading">CLOUDS</p>
+                        <p id="cloudData"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
