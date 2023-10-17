@@ -83,6 +83,16 @@ searchLogo.addEventListener('click', ()=>{
     searchInput.value = "";
 });
 
+formContainer.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    if(searchInput.value == ""){
+        return;
+    }
+    let inputValue = searchInput.value;
+    showWeatherByCity(inputValue);
+    searchInput.value = "";
+});
+
 
 function putFetchedDataIntoWeatherResultContainer(data){
     cityName.innerText = data?.name;
