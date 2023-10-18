@@ -25,6 +25,9 @@ let oldTab = yourWeather;
 oldTab.classList.add('active');
 let apiKey = "eb9f6401031bae21a7a8a4cc75679ec0";
 
+searchInput.addEventListener('focus',()=>{
+    notFound.classList.add('vanish');
+})
 
 function switchTab(newTab){
     if(newTab != oldTab){
@@ -201,12 +204,13 @@ async function showWeatherByCity(city){
         loadingContainer.classList.add('vanish');
         putFetchedDataIntoWeatherResultContainer(data);
         weatherResult.classList.remove('vanish');
-        console.log(city);
+        searchInput.blur();
     } catch (error) {
         // console.log('Some Error occurred '+ error)
         // window.alert('Something Error occurred');
         loadingContainer.classList.add('vanish');
         weatherResult.classList.add('vanish');
         notFound.classList.remove('vanish');
+        searchInput.blur();
     }
 }
